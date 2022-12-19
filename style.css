@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  --bg-image:url(./camera-514992_1920.jpg);
+  --bg-opacity:0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  filter: blur(3px);
+  background-image: var(--bg-image);
+  opacity: var(--bg-opacity);
+  background-size: cover;
+}
+body .cursor {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  pointer-events: none;
+  background-size: cover;
+  background-image: url(./linus-belanger-QgZvGuMoMV0-unsplash-removebg-preview.png);
+  /*這樣還是可以選擇到底下的東西*/
+  transform: translate(-2rem, -2rem);
+  z-index: 100;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 73vh;
+  position: relative;
+  perspective: 800px;
+}
+body .container .cover {
+  position: absolute;
+  background-image: url(./TexturesCom_BookCovers0146_7_masked_S.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(38deg) rotateY(38deg) rotateZ(-38deg);
+  z-index: 1;
+}
+body .container .paper {
+  position: relative;
+  background-image: url(./TexturesCom_PaperPage0054_2_masked_S.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(38deg) rotateY(38deg) rotateZ(-38deg);
+}
+body .container .paper label {
+  font-size: 5rem;
+  font-weight: 600;
+  color: rgb(39, 17, 0);
+  position: absolute;
+  left: 6%;
+  top: 5%;
+  font-family: "freestyle script";
+}
+body .container .paper #text {
+  font-size: 3rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  color: rgb(39, 17, 0);
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: "freestyle script", "細明體";
+}
+body .container .paper #text:focus {
+  outline: none;
+}
+body .container .paper #text::-moz-placeholder {
+  color: rgb(39, 17, 0);
+}
+body .container .paper #text:-ms-input-placeholder {
+  color: rgb(39, 17, 0);
+}
+body .container .paper #text::placeholder {
+  color: rgb(39, 17, 0);
+}
+body .container .paper .btn {
+  position: absolute;
+  top: 20%;
+  right: 7%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(39, 17, 0);
+}
+body .container .list {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  list-style-type: upper-roman;
+}
+body .container .list li {
+  font-family: "freestyle script", "細明體";
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(39, 17, 0);
+}
+
+@media screen and (max-width: 768px) {
+  body .container {
+    width: 70%;
+    height: 60vh;
+  }
+  body .container .paper label {
+    font-size: 3rem;
+    left: 6%;
+    top: 5%;
+  }
+  body .container .paper #text {
+    font-size: 1.8rem;
+    left: 4.5%;
+    top: 20%;
+  }
+  body .container .paper .btn {
+    font-size: 2.2rem;
+    right: 7%;
+    top: 16%;
+  }
+  body .container .list {
+    left: 18%;
+  }
+}/*# sourceMappingURL=style.css.map */
