@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carattere&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -78,7 +79,7 @@ body .container .paper label {
   position: absolute;
   left: 6%;
   top: 5%;
-  font-family: "freestyle script";
+  font-family: "Carattere";
 }
 body .container .paper #text {
   font-size: 3vmax;
@@ -89,7 +90,7 @@ body .container .paper #text {
   position: absolute;
   left: 5%;
   top: 20%;
-  font-family: "freestyle script", "細明體";
+  font-family: "Carattere", "細明體";
 }
 body .container .paper #text:focus {
   outline: none;
@@ -115,6 +116,7 @@ body .container .paper .btn {
   font-size: 3vmax;
   font-weight: 600;
   color: rgb(39, 17, 0);
+  font-family: "Carattere";
 }
 body .container .list {
   position: absolute;
@@ -123,7 +125,7 @@ body .container .list {
   list-style-type: upper-roman;
 }
 body .container .list li {
-  font-family: "freestyle script", "細明體";
+  font-family: "Carattere", "細明體";
   font-size: 2.3vmax;
   font-weight: 300;
   font-style: italic;
