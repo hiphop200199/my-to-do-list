@@ -132,7 +132,7 @@ body .container .list li {
 
 @media screen and (max-width: 768px) {
   body .container {
-    width: 45%;
+    width: 78%;
     height: 65vh;
   }
   body .container .paper {
