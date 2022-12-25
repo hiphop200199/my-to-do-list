@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     function openNote (e) {
-        cover.style.animation="openCover 3s linear  forwards"; 
-        paper.style.animation="openPaper 3s linear  forwards";
+        cover.style.animation="openCover 1s linear  forwards"; 
+        paper.style.animation="openPaper 1s linear  forwards";
 
     }
     function addToList(e) {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.close();
     }
     function closeNote(e) {
-        cover.style.animation="closeCover 3s linear  forwards"; 
-        paper.style.animation="closePaper 3s linear  forwards";
+        cover.style.animation="closeCover 1s linear  forwards"; 
+        paper.style.animation="closePaper 1s linear  forwards";
 }
 });

@@ -81,7 +81,7 @@
   }
 }
 body {
-  --bg-image:url(./camera.jpg);
+  --bg-image:url(./camera.webp);
   --bg-opacity:0.75;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ body .cursor {
   height: 5vmax;
   pointer-events: none;
   background-size: cover;
-  background-image: url(./pen.png);
+  background-image: url(./pen.webp);
   /*這樣還是可以選擇到底下的東西*/
   transform: translate(-2.5vmax, -2.5vmax);
   z-index: 100;
@@ -174,7 +174,7 @@ body .container {
 }
 body .container .cover {
   position: absolute;
-  background-image: url(./BookCover.png);
+  background-image: url(./BookCover.webp);
   background-size: cover;
   -webkit-clip-path: polygon(15% 0%, 2% 9%, 3% 24%, 0% 39%, 4% 52%, 2% 67%, 5% 75%, 0% 90%, 8% 100%, 20% 96%, 31% 100%, 41% 96%, 45% 100%, 56% 98%, 59% 100%, 70% 96%, 83% 100%, 90% 92%, 100% 83%, 95% 71%, 100% 64%, 98% 48%, 100% 30%, 95% 21%, 99% 12%, 98% 0%, 81% 5%, 76% 0%, 67% 8%, 59% 3%, 51% 9%, 40% 2%, 32% 7%, 24% 2%);
           clip-path: polygon(15% 0%, 2% 9%, 3% 24%, 0% 39%, 4% 52%, 2% 67%, 5% 75%, 0% 90%, 8% 100%, 20% 96%, 31% 100%, 41% 96%, 45% 100%, 56% 98%, 59% 100%, 70% 96%, 83% 100%, 90% 92%, 100% 83%, 95% 71%, 100% 64%, 98% 48%, 100% 30%, 95% 21%, 99% 12%, 98% 0%, 81% 5%, 76% 0%, 67% 8%, 59% 3%, 51% 9%, 40% 2%, 32% 7%, 24% 2%);
@@ -190,7 +190,7 @@ body .container .cover {
 }
 body .container .paper {
   position: absolute;
-  background-image: url(./PaperPage.png);
+  background-image: url(./PaperPage.webp);
   -webkit-clip-path: polygon(15% 0%, 2% 9%, 3% 24%, 0% 39%, 4% 52%, 2% 67%, 5% 75%, 0% 90%, 8% 100%, 20% 96%, 31% 100%, 41% 96%, 45% 100%, 56% 98%, 59% 100%, 70% 96%, 83% 100%, 90% 92%, 100% 83%, 95% 71%, 100% 64%, 98% 48%, 100% 30%, 95% 21%, 99% 12%, 98% 0%, 81% 5%, 76% 0%, 67% 8%, 59% 3%, 51% 9%, 40% 2%, 32% 7%, 24% 2%);
           clip-path: polygon(15% 0%, 2% 9%, 3% 24%, 0% 39%, 4% 52%, 2% 67%, 5% 75%, 0% 90%, 8% 100%, 20% 96%, 31% 100%, 41% 96%, 45% 100%, 56% 98%, 59% 100%, 70% 96%, 83% 100%, 90% 92%, 100% 83%, 95% 71%, 100% 64%, 98% 48%, 100% 30%, 95% 21%, 99% 12%, 98% 0%, 81% 5%, 76% 0%, 67% 8%, 59% 3%, 51% 9%, 40% 2%, 32% 7%, 24% 2%);
   background-size: cover;
@@ -264,7 +264,7 @@ body .container .list li {
   color: rgb(39, 17, 0);
 }
 body .message {
-  background-image: url(./TexturesCom_PaperPage0015_M-removebg.png);
+  background-image: url(./messagePaperPage.webp);
   -webkit-clip-path: polygon(4% 1%, 1% 10%, 3% 25%, 1% 47%, 3% 60%, 0% 75%, 1% 89%, 9% 98%, 32% 100%, 42% 96%, 54% 100%, 62% 98%, 70% 100%, 82% 97%, 95% 99%, 100% 91%, 100% 72%, 98% 54%, 100% 46%, 100% 28%, 99% 17%, 99% 9%, 99% 1%, 62% 0%, 33% 0%, 20% 1%);
           clip-path: polygon(4% 1%, 1% 10%, 3% 25%, 1% 47%, 3% 60%, 0% 75%, 1% 89%, 9% 98%, 32% 100%, 42% 96%, 54% 100%, 62% 98%, 70% 100%, 82% 97%, 95% 99%, 100% 91%, 100% 72%, 98% 54%, 100% 46%, 100% 28%, 99% 17%, 99% 9%, 99% 1%, 62% 0%, 33% 0%, 20% 1%);
   background-color: transparent;
@@ -309,7 +309,101 @@ body .message .closebtn {
   font-family: "Carattere";
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width < 768px) {
+  body .bye {
+    position: absolute;
+    left: 2%;
+    top: 1%;
+    width: 4.5vmax;
+    height: 4.5vmax;
+    display: flex;
+    font-size: 4vmax;
+    font-weight: 600;
+    color: rgb(39, 17, 0);
+    font-family: "Carattere";
+  }
+  body .background-music {
+    position: absolute;
+    right: 23%;
+    top: 1%;
+    width: 4.5vmax;
+    height: 4.5vmax;
+    display: flex;
+    font-size: 4vmax;
+    font-weight: 600;
+    color: rgb(39, 17, 0);
+    font-family: "Carattere";
+  }
+  body .edit {
+    position: absolute;
+    right: 14%;
+    top: 1%;
+    width: 4.5vmax;
+    height: 4.5vmax;
+    display: flex;
+    font-size: 4vmax;
+    font-weight: 600;
+    color: rgb(39, 17, 0);
+    font-family: "Carattere";
+  }
+  body .finish {
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    width: 4.5vmax;
+    height: 4.5vmax;
+    display: flex;
+    font-size: 4vmax;
+    font-weight: 600;
+    color: rgb(39, 17, 0);
+    font-family: "Carattere";
+  }
+  body .message {
+    background-image: url(./messagePaperPage.webp);
+    -webkit-clip-path: polygon(4% 1%, 1% 10%, 3% 25%, 1% 47%, 3% 60%, 0% 75%, 1% 89%, 9% 98%, 32% 100%, 42% 96%, 54% 100%, 62% 98%, 70% 100%, 82% 97%, 95% 99%, 100% 91%, 100% 72%, 98% 54%, 100% 46%, 100% 28%, 99% 17%, 99% 9%, 99% 1%, 62% 0%, 33% 0%, 20% 1%);
+            clip-path: polygon(4% 1%, 1% 10%, 3% 25%, 1% 47%, 3% 60%, 0% 75%, 1% 89%, 9% 98%, 32% 100%, 42% 96%, 54% 100%, 62% 98%, 70% 100%, 82% 97%, 95% 99%, 100% 91%, 100% 72%, 98% 54%, 100% 46%, 100% 28%, 99% 17%, 99% 9%, 99% 1%, 62% 0%, 33% 0%, 20% 1%);
+    background-color: transparent;
+    background-size: cover;
+    position: absolute;
+    border: none;
+    width: 40%;
+    height: 25vh;
+    left: 30%;
+    top: 37.5vh;
+  }
+  body .message .modal-message {
+    position: absolute;
+    left: 14%;
+    top: 15%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 3.5vmax;
+    font-weight: 600;
+    color: rgb(39, 17, 0);
+    font-family: "Carattere";
+  }
+  body .message .closebtn {
+    position: absolute;
+    left: 65%;
+    top: 80%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+    font-size: 2.5vmax;
+    font-weight: 600;
+    color: rgb(39, 17, 0);
+    font-family: "Carattere";
+  }
   body .container {
     width: 78%;
     height: 65vh;
