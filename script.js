@@ -1,46 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
     let mouse = document.querySelector(".cursor");
-    let cover = document.querySelector(".cover");
+    let bye=document.querySelector(".bye");
+    let musicSrc=new Audio("./melody.mp3");
+    let musicOn=document.querySelector(".background-music");
+    let edit = document.querySelector(".edit");
+    let cover=document.querySelector(".cover");
     let paper = document.querySelector(".paper");
     let inputbox = document.querySelector("#text");
     let btn = document.querySelector(".btn");
     let toDoList = document.querySelector(".list");
-    /*window.addEventListener("mousemove",function(e){ 從瀏覽器在移動滑鼠的時候觀察座標之類的資料
-        console.log(e);
-    })*/
+    let modal=document.querySelector(".message");
+    let message=document.querySelector(".modal-message")
+    let closeBtn=document.querySelector(".closebtn");
+    let finish=document.querySelector(".finish");
+    
     window.addEventListener("mousemove", cursor);
-    cover.addEventListener("click", open);
+    bye.addEventListener("click",goodbye);
+    musicOn.addEventListener("click",musicMode);
+    edit.addEventListener("click",openNote);
     btn.addEventListener("click", addToList);
-
+    closeBtn.addEventListener("click",closedialog);
+    finish.addEventListener("click",closeNote);
     function cursor(e) {   //e表示事件發生時，得到的所有資訊
 
         mouse.style.top = e.pageY + "px"; //把y座標設成滑鼠移動時，游標中的y座標
         mouse.style.left = e.pageX + "px";//把x座標設成滑鼠移動時，游標中的x座標
     };
+    function goodbye(e){
+       alert("Have a nice day,let me help you close the window,Goodbye.");
+        window.close();
+       
+    }
+    function musicMode(){
+        if(musicSrc.paused){
+       musicSrc.volume=0.5;
+       musicSrc.play();
+        }else{
+            musicSrc.pause();
+        }
+    }
+    function openNote (e) {
+        cover.style.animation="openCover 3s linear  forwards"; 
+        paper.style.animation="openPaper 3s linear  forwards";
 
-
-    function open(e) {
-        let coordinate = 1;
-        let opacity = 1;
-        setInterval(function () {
-            if (coordinate < 380) {
-                coordinate++;
-                opacity = opacity + 0.025;
-                cover.style.transform = `rotateX(${38 - 0.1 * coordinate}deg) rotateY(${38 - 0.1 * coordinate}deg) rotateZ(${-38 + 0.1 * coordinate}deg)`;
-                cover.style.opacity = `${1 - 0.1 * opacity}`;
-                paper.style.transform = `rotateX(${38 - 0.1 * coordinate}deg) rotateY(${38 - 0.1 * coordinate}deg) rotateZ(${-38 + 0.1 * coordinate}deg)`;
-            };
-            if (coordinate == 380) {
-                cover.style.display = "none";
-            }
-           
-
-
-        }, 5);
-
-
-    };
-
+    }
     function addToList(e) {
 
         let listItem = document.createElement("li");
@@ -48,11 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let listText = document.createTextNode(inputValue);
         listItem.appendChild(listText);
         if (inputValue === "") {
-            alert("Write something please.");
+            message.innerText="Write something please.";
+            modal.show();
         } else {
             toDoList.appendChild(listItem);
         }
         inputbox.value = "";
 
     }
+    function closedialog(){
+        modal.close();
+    }
+    function closeNote(e) {
+        cover.style.animation="closeCover 3s linear  forwards"; 
+        paper.style.animation="closePaper 3s linear  forwards";
+}
 });
