@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let closeBtn=document.querySelector(".closebtn");
     let finish=document.querySelector(".finish");
     
+    
     window.addEventListener("mousemove", cursor);
     bye.addEventListener("click",goodbye);
     musicOn.addEventListener("click",musicMode);
@@ -56,8 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             toDoList.appendChild(listItem);
         }
-        inputbox.value = "";
-
+        inputbox.value = ""; 
     }
     function closedialog(){
         modal.close();
@@ -66,4 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
         cover.style.animation="closeCover 1s linear  forwards"; 
         paper.style.animation="closePaper 1s linear  forwards";
 }
+   function storeList(note) {
+        localStorage.setItem("to-do",note);
+   }
+   function remindList(){
+    let notDoneYet=localStorage.getItem("to-do");
+   }
 });

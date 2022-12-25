@@ -214,9 +214,13 @@ body {
                 font-weight: 300;
                 font-style: italic;
                 color: rgb(39, 17, 0);
+                user-select: none;
+               
+               
+                }
             }
         }
-    }
+    
     & .message{
        background-image: url(./messagePaperPage.webp);
         clip-path: polygon(4% 1%, 1% 10%, 3% 25%, 1% 47%, 3% 60%, 0% 75%, 1% 89%, 9% 98%, 32% 100%, 42% 96%, 54% 100%, 62% 98%, 70% 100%, 82% 97%, 95% 99%, 100% 91%, 100% 72%, 98% 54%, 100% 46%, 100% 28%, 99% 17%, 99% 9%, 99% 1%, 62% 0%, 33% 0%, 20% 1%);

@@ -262,6 +262,10 @@ body .container .list li {
   font-weight: 300;
   font-style: italic;
   color: rgb(39, 17, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 body .message {
   background-image: url(./messagePaperPage.webp);
