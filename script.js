@@ -1,9 +1,10 @@
 window.addEventListener('load', () => {
 	todos = JSON.parse(localStorage.getItem('todos')) || [];
-	
+	//todos在這邊是全域變數
 	const newTodoForm = document.querySelector('#new-todo-form');
 
 	newTodoForm.addEventListener('submit', e => {
+		//event物件包含了事件相關的所有資訊，target指向觸發事件的元素，currentTarget永遠指向有事件監聽器那一個元素
 		e.preventDefault();
 		const todo = {
 			content: e.target.elements.content.value,
