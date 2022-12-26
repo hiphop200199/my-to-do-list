@@ -162,7 +162,7 @@ body {
                 font-family: "Carattere";
             }
 
-            & #text {
+            & #content {
                 font-size: 3vmax;
                 font-weight: 500;
                 background-color: transparent;
@@ -197,27 +197,62 @@ body {
                 color: rgb(39, 17, 0);
                 font-family: "Carattere";
                 pointer-events: auto;
+                border: none;
+                background-color: transparent;
             }
             
         }
 
 
-        & .list {
+        & #todo-list {
             position: absolute;
             top: 30%;
             left: 15%;
             list-style-type: upper-roman;
 
-            & li {
-                font-family: "Carattere", "細明體";
-                font-size: 2.3vmax;
-                font-weight: 300;
-                font-style: italic;
-                color: rgb(39, 17, 0);
-                user-select: none;
+            & div.todo-item {
                
-               
+                
+               display: flex;
+               justify-content: space-evenly;
+                & .todo-content input{
+                    font-family: "Carattere", "細明體";
+                    font-size: 2.3vmax;
+                    font-weight: 300;
+                    font-style: italic;
+                    color: rgb(39, 17, 0);
+                    background-color: transparent;
+                    margin-inline: 0.5vw;
+                    border: none;
+                    &:focus{
+                        outline: none;
+                    }
                 }
+                & .editFile{
+                    font-family: "Carattere", "細明體";
+                    font-size: 2.3vmax;
+                    font-weight: 300;
+                    font-style: italic;
+                    color: rgb(39, 17, 0);
+                   background-color: transparent;
+                   margin-inline: 0.7vw;
+                   pointer-events: auto;
+                   border: none;
+                   text-decoration: underline;
+                }
+                & .deleteFile{
+                    font-family: "Carattere", "細明體";
+                    font-size: 2.3vmax;
+                    font-weight: 300;
+                    font-style: italic;
+                    color: rgb(39, 17, 0);
+                   background-color: transparent;
+                   margin-inline:1.5vw;
+                   pointer-events: auto;
+                   border: none;
+                   text-decoration: underline;
+                }
+              }
             }
         }
     
@@ -367,7 +402,7 @@ body {
             left: 6%;
             top:5%;
         }
-        & .paper #text{
+        & .paper #content{
             font-size: 3.5vmax;
             left: 4.5%;
             top:20%;
@@ -375,10 +410,22 @@ body {
         & .paper .btn{
             font-size: 3.5vmax;
             right: 7%;
-            top: 16%;
+            top: 20%;
         }
-        & .list{
-            left:18%;
+        & #todo-list{
+            left:10%;
+            & div.todo-item{
+                display: flex;
+                & .todo-content input{
+                    margin-right: 2vw;
+                }
+                & .editFile{
+                    margin-inline: 3vw;
+                }
+                & .deleteFile{
+                    margin-inline: 4vw;
+                }
+            } 
         }
     }
 }

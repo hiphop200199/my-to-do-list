@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
+    <script src="ui.js"></script>
     <script src="script.js"></script>
     <title>To do...</title>
   </head>
@@ -39,16 +40,25 @@
     <div class="container">
       <div class="cover"></div>
       <div class="paper">
-        <label>Do...</label>
-        <input type="text" id="text" placeholder=" Let`s..." name="text" />
-        <div class="btn">√</div>
+        <form id="new-todo-form">
+          <label>Do...</label>
+          <input
+            type="text"
+            id="content"
+            placeholder=" Let`s..."
+            name="content"
+          />
+          <input type="submit" class="btn" value="√" />
+        </form>
 
-        <ul class="list"></ul>
+        <ul id="todo-list"></ul>
       </div>
     </div>
-    <dialog class="message">
-      <h3 class="modal-message">Write something please.</h3>
-      <button class="closebtn">Sure.</button>
-    </dialog>
+    <form method="dialog">
+      <dialog class="message">
+        <h3 class="modal-message">Write something please.</h3>
+        <button type="submit" class="closebtn">Sure.</button>
+      </dialog>
+    </form>
   </body>
 </html>

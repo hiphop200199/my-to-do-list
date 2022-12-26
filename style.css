@@ -211,7 +211,7 @@ body .container .paper label {
   top: 5%;
   font-family: "Carattere";
 }
-body .container .paper #text {
+body .container .paper #content {
   font-size: 3vmax;
   font-weight: 500;
   background-color: transparent;
@@ -223,16 +223,16 @@ body .container .paper #text {
   font-family: "Carattere", "細明體";
   pointer-events: auto;
 }
-body .container .paper #text:focus {
+body .container .paper #content:focus {
   outline: none;
 }
-body .container .paper #text::-moz-placeholder {
+body .container .paper #content::-moz-placeholder {
   color: rgb(39, 17, 0);
 }
-body .container .paper #text:-ms-input-placeholder {
+body .container .paper #content:-ms-input-placeholder {
   color: rgb(39, 17, 0);
 }
-body .container .paper #text::placeholder {
+body .container .paper #content::placeholder {
   color: rgb(39, 17, 0);
 }
 body .container .paper .btn {
@@ -249,23 +249,55 @@ body .container .paper .btn {
   color: rgb(39, 17, 0);
   font-family: "Carattere";
   pointer-events: auto;
+  border: none;
+  background-color: transparent;
 }
-body .container .list {
+body .container #todo-list {
   position: absolute;
   top: 30%;
   left: 15%;
   list-style-type: upper-roman;
 }
-body .container .list li {
+body .container #todo-list div.todo-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+body .container #todo-list div.todo-item .todo-content input {
   font-family: "Carattere", "細明體";
   font-size: 2.3vmax;
   font-weight: 300;
   font-style: italic;
   color: rgb(39, 17, 0);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  background-color: transparent;
+  margin-inline: 0.5vw;
+  border: none;
+}
+body .container #todo-list div.todo-item .todo-content input:focus {
+  outline: none;
+}
+body .container #todo-list div.todo-item .editFile {
+  font-family: "Carattere", "細明體";
+  font-size: 2.3vmax;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(39, 17, 0);
+  background-color: transparent;
+  margin-inline: 0.7vw;
+  pointer-events: auto;
+  border: none;
+  text-decoration: underline;
+}
+body .container #todo-list div.todo-item .deleteFile {
+  font-family: "Carattere", "細明體";
+  font-size: 2.3vmax;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(39, 17, 0);
+  background-color: transparent;
+  margin-inline: 1.5vw;
+  pointer-events: auto;
+  border: none;
+  text-decoration: underline;
 }
 body .message {
   background-image: url(./messagePaperPage.webp);
@@ -422,7 +454,7 @@ body .message .closebtn {
     left: 6%;
     top: 5%;
   }
-  body .container .paper #text {
+  body .container .paper #content {
     font-size: 3.5vmax;
     left: 4.5%;
     top: 20%;
@@ -430,9 +462,21 @@ body .message .closebtn {
   body .container .paper .btn {
     font-size: 3.5vmax;
     right: 7%;
-    top: 16%;
+    top: 20%;
   }
-  body .container .list {
-    left: 18%;
+  body .container #todo-list {
+    left: 10%;
+  }
+  body .container #todo-list div.todo-item {
+    display: flex;
+  }
+  body .container #todo-list div.todo-item .todo-content input {
+    margin-right: 2vw;
+  }
+  body .container #todo-list div.todo-item .editFile {
+    margin-inline: 3vw;
+  }
+  body .container #todo-list div.todo-item .deleteFile {
+    margin-inline: 4vw;
   }
 }/*# sourceMappingURL=style.css.map */
