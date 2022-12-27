@@ -215,6 +215,10 @@ body {
                 
                display: flex;
                justify-content: space-evenly;
+               margin-bottom: 1vh;
+               & .todo-content{
+                margin-right: 3vw;
+               }
                 & .todo-content input{
                     font-family: "Carattere", "細明體";
                     font-size: 2.3vmax;
@@ -222,7 +226,6 @@ body {
                     font-style: italic;
                     color: rgb(39, 17, 0);
                     background-color: transparent;
-                    margin-inline: 0.5vw;
                     border: none;
                     &:focus{
                         outline: none;
@@ -416,8 +419,10 @@ body {
             left:10%;
             & div.todo-item{
                 display: flex;
-                & .todo-content input{
-                   margin: 0;
+                
+                margin-bottom: 1vh;
+                & .todo-content{
+                   margin-right: 1vw;
                 }
                 & .editFile{
                     margin-inline: 1.5vw;

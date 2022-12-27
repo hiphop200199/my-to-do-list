@@ -35,8 +35,8 @@ function DisplayTodos () {
 		editButton.classList.add('editFile');
 		deleteButton.classList.add('deleteFile');
 		content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
-		editButton.innerText = 'Edit';
-		deleteButton.innerText = 'Delete';
+		editButton.innerText = 'Ed';
+		deleteButton.innerText = 'Del';
 		todoItem.appendChild(content);
 		todoItem.appendChild(editButton);
 		todoItem.appendChild(deleteButton);

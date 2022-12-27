@@ -261,6 +261,10 @@ body .container #todo-list {
 body .container #todo-list div.todo-item {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 1vh;
+}
+body .container #todo-list div.todo-item .todo-content {
+  margin-right: 3vw;
 }
 body .container #todo-list div.todo-item .todo-content input {
   font-family: "Carattere", "細明體";
@@ -269,7 +273,6 @@ body .container #todo-list div.todo-item .todo-content input {
   font-style: italic;
   color: rgb(39, 17, 0);
   background-color: transparent;
-  margin-inline: 0.5vw;
   border: none;
 }
 body .container #todo-list div.todo-item .todo-content input:focus {
@@ -469,9 +472,10 @@ body .message .closebtn {
   }
   body .container #todo-list div.todo-item {
     display: flex;
+    margin-bottom: 1vh;
   }
-  body .container #todo-list div.todo-item .todo-content input {
-    margin: 0;
+  body .container #todo-list div.todo-item .todo-content {
+    margin-right: 1vw;
   }
   body .container #todo-list div.todo-item .editFile {
     margin-inline: 1.5vw;
