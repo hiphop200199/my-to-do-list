@@ -417,13 +417,13 @@ body {
             & div.todo-item{
                 display: flex;
                 & .todo-content input{
-                    margin-right: 2vw;
+                   margin: 0;
                 }
                 & .editFile{
-                    margin-inline: 2vw;
+                    margin-inline: 1.5vw;
                 }
                 & .deleteFile{
-                    margin-inline: 2vw;
+                    margin-inline: 1.5vw;
                 }
             } 
         }

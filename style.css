@@ -471,12 +471,12 @@ body .message .closebtn {
     display: flex;
   }
   body .container #todo-list div.todo-item .todo-content input {
-    margin-right: 2vw;
+    margin: 0;
   }
   body .container #todo-list div.todo-item .editFile {
-    margin-inline: 2vw;
+    margin-inline: 1.5vw;
   }
   body .container #todo-list div.todo-item .deleteFile {
-    margin-inline: 2vw;
+    margin-inline: 1.5vw;
   }
 }/*# sourceMappingURL=style.css.map */
